@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FirstView">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/splashimg" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/starting_date_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="12dp"
+                    android:background="@color/edittextbgwhite"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="Enter Date of your last period"
+                    android:longClickable="false"
+                    android:textAlignment="center" />
+
+
+                <Spinner
+                    android:id="@+id/duration_period_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/starting_date_id"
+                    android:layout_margin="12dp"
+                    android:background="@color/edittextbgwhite"
+                    android:focusable="false"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/duration_periodcycle_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/duration_period_id"
+                    android:layout_margin="12dp"
+                    android:background="@color/edittextbgwhite"
+                    android:focusable="false"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+
+                    />
+
+
+                <Button
+                    android:id="@+id/submit_bttn_id"
+                    style="@style/CustomBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/duration_periodcycle_id"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="12dp"
+                    android:text="Submit"
+                    android:textColor="@color/textWhite" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

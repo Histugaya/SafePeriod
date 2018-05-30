@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_BlogDashboard_User">
+
+    <TextView
+        android:id="@+id/blog_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="User Dashboard"
+        />
+    <Spinner
+        android:id="@+id/login_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/blog_posting_layout"
+        android:layout_margin="20dp">
+
+
+        <EditText
+            android:id="@+id/blog_post"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:hint="Post your problem " />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blog_post"
+            android:text="public"
+            android:id="@+id/blog_status_public"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blog_post"
+            android:id="@+id/blog_status_private"
+            android:layout_toRightOf="@+id/blog_status_public"
+            android:text="private" />
+
+        <Button
+            android:id="@+id/blog_post_submit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blog_status_public"
+            android:layout_marginBottom="15dp"
+            android:text="post"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blog_posting_layout"
+        android:layout_margin="20dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_user_dash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDoctorRegistration">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp">
+
+        <TextView
+            android:id="@+id/register_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Doctor"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            />
+
+        <EditText
+            android:id="@+id/edtxt_username_user_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_title"
+            android:hint="Username" />
+        <EditText
+            android:id="@+id/admin_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxt_username_user_reg"
+            android:hint="passsword"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/admin_password_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_password"
+            android:hint="confirm passsword"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/admin_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_password_confirmation"
+            android:hint="phone"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/admin_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_phone"
+            android:hint="mrn number"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/register_bttn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_verification"
+            android:text="Register"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

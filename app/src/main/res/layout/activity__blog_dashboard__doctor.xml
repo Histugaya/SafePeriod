@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_BlogDashboard_Doctor">
+
+    <TextView
+        android:id="@+id/blog_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Doctor Dashboard"
+        />
+    <Spinner
+        android:id="@+id/login_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/blog_posting_layout"
+        android:layout_margin="20dp">
+
+
+        <EditText
+            android:id="@+id/blog_post"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:hint="Post the health tips " />
+
+
+        <Button
+            android:id="@+id/blog_post_submit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blog_post"
+            android:layout_marginBottom="15dp"
+            android:text="post"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blog_posting_layout"
+        android:layout_margin="20dp"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_doctor_dash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
